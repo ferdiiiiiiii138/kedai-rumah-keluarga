@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Kedai Rumah Keluarga</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tambahan gaya agar halaman profile lebih menarik dan interaktif */
+        .profile-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-left: 5px solid #d97706; /* Aksen garis warna oranye hangat */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+        .card h2, .card h3 {
+            color: #1f2937;
+            margin-top: 0;
+        }
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .vision-mission-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="index.html">Beranda</a>
+        <a href="profile.html" class="active">Profile</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="kontak.html">Contact</a>
+    </nav>
+
+    <div class="profile-container">
+        <h1>Profil Kedai Rumah Keluarga</h1>
+        <p style="color: #4b5563; margin-bottom: 30px;">Mengenal lebih dekat perjalanan, visi, dan nilai-nilai yang kami junjung tinggi dalam menyajikan kehangatan kuliner.</p>
+
+        <!-- Sejarah Singkat -->
+        <div class="card">
+            <h2>📜 Sejarah Singkat</h2>
+            <p>Kedai Rumah Keluarga berawal dari sebuah dapur kecil pada tahun 2026 yang konsisten meracik resep-resep warisan keluarga. Berkat konsistensi rasa dan suasana hangat yang ditawarkan, kini kedai kami bertransformasi menjadi tempat berkumpulnya para pecinta kuliner rumahan.</p>
+        </div>
+
+        <!-- Visi & Misi dalam bentuk Grid -->
+        <div class="vision-mission-grid">
+            <div class="card" style="border-left-color: #2563eb;">
+                <h3>🎯 Visi Kami</h3>
+                <p>Menjadi kedai kuliner pilihan utama yang menyajikan kehangatan rasa rumahan dan mempererat kebersamaan antar keluarga di Indonesia.</p>
+            </div>
+            <div class="card" style="border-left-color: #16a34a;">
+                <h3>🚀 Misi Kami</h3>
+                <ul style="padding-left: 20px; margin: 0;">
+                    <li style="margin-bottom: 8px;">Menyajikan hidangan berkualitas tinggi dengan bahan segar pilihan.</li>
+                    <li style="margin-bottom: 8px;">Menjaga keotentikan resep turun-temurun.</li>
+                    <li>Memberikan pelayanan yang ramah dan nyaman.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Nilai Perusahaan -->
+        <div class="card" style="border-left-color: #9333ea;">
+            <h2>💡 Nilai Perusahaan</h2>
+            <p>Kami percaya bahwa kunci dari masakan yang enak adalah ketulusan. Setiap hidangan dimasak dengan penuh cinta, layaknya menyajikan makanan untuk keluarga tercinta di rumah sendiri.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Kedai Rumah Keluarga. Hak Cipta Dilindungi Oleh Allah SWT.
+    </div>
+
+</body>
+</html>

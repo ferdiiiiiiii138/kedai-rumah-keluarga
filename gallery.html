@@ -2,29 +2,87 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Kedai Rumah Keluarga</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styling tambahan khusus galeri foto grid */
+        .gallery-grid {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0 40px 0;
+        }
+        .gallery-grid li {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid #f3f4f6;
+            transition: transform 0.3s ease;
+        }
+        .gallery-grid li:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-caption {
+            padding: 12px 15px;
+            font-size: 0.9rem;
+            color: #4b5563;
+            text-align: center;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
+
     <nav class="nav">
         <a href="index.html">Beranda</a>
-        <a href="profil.html">Profile</a>
+        <a href="profile.html">Profile</a>
         <a href="about.html">About</a>
         <a href="gallery.html" class="active">Gallery</a>
         <a href="kontak.html">Contact</a>
     </nav>
 
-    <h1>Galeri & Video Promosi</h1>
-    <p>Saksikan cuplikan kehangatan dan suasana di Kedai Rumah Keluarga.</p>
+    <h1>Galeri & Dokumentasi</h1>
+    <p>Saksikan cuplikan kehangatan, suasana, serta kelezatan sajian di Kedai Rumah Keluarga.</p>
 
-    <video controls autoplay muted>
+    <!-- Bagian Galeri Foto -->
+    <h2>Dokumentasi Foto Kedai & Menu</h2>
+    <ul class="gallery-grid">
+        <li>
+            <img src="nasi uduk.jpg" alt="Suasana Meja Utama">
+            <div class="gallery-caption">Sajian Utama Penuh Cita Rasa</div>
+        </li>
+        <li>
+            <img src="ayam panggang.jpg" alt="Proses Penyajian">
+            <div class="gallery-caption">Menu Favorit Keluarga</div>
+        </li>
+        <li>
+            <img src="esteh.jpg" alt="Sudut Kedai">
+            <div class="gallery-caption">Minuman Penyegar Suasana</div>
+        </li>
+    </ul>
+
+    <!-- Bagian Video Promosi -->
+    <h2>Video Promosi Kedai</h2>
+    <p>Video interaktif profil dan aktivitas harian di kedai kami:</p>
+    
+    <video controls>
         <source src="vidio_promosi.mp4" type="video/mp4">
-        Browser Anda tidak mendukung pemutaran video.
+        Maaf, browser Anda tidak mendukung pemutaran video.
     </video>
 
     <div class="footer">
         &copy; 2026 Kedai Rumah Keluarga. Hak Cipta Dilindungi Oleh Allah SWT.
     </div>
+
 </body>
 </html>

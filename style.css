@@ -1,15 +1,16 @@
 /* ==========================================
-   1. PENGATURAN UMUM & BODY
+   1. PENGATURAN UMUM & BODY (Latar Belakang Dipercantik)
    ================================---------- */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fdfbf7;
+    background: linear-gradient(to bottom, #fffdfa, #f3ede2); /* Gradasi krem hangat agar tidak polos */
     color: #2d3748;
     margin: 0;
     padding: 20px;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    min-height: 100vh;
 }
 
 /* ==========================================
@@ -149,7 +150,7 @@ ul:not(.menu-list) ul li {
     border: 1px solid #f3f4f6;
     margin-top: 30px;
     margin-bottom: 30px;
-    clear: both; /* Memastikan elemen ini turun ke bawah grid menu */
+    clear: both;
     width: 100%;
     box-sizing: border-box;
 }
@@ -172,4 +173,69 @@ video {
     margin-top: 40px;
     color: #6b7280;
     font-size: 0.9rem;
+}
+
+/* ==========================================
+   7. STYLING TABEL MENU (DIPERCANTIK & ESTETIK)
+   ================================---------- */
+table {
+    width: 100%;
+    border-collapse: separate; /* Diubah agar border-radius berfungsi sempurna */
+    border-spacing: 0;
+    margin: 20px 0;
+    font-family: inherit;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 12px; /* Membuat sudut luar tabel melengkung */
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+table th {
+    background-color: #d97706; /* Warna oranye hangat */
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f3f4f6;
+    border-right: 1px solid #f3f4f6;
+    color: #374151;
+    font-size: 14.5px;
+    vertical-align: middle;
+}
+
+/* Menghilangkan garis kanan di kolom terakhir */
+table td:last-child {
+    border-right: none;
+}
+
+/* Kolom Kategori (Kolom 1) dibuat tebal dengan latar belakang krem lembut */
+table td:first-child {
+    font-weight: bold;
+    background-color: #fffbeb;
+    color: #92400e;
+}
+
+/* Kolom Harga diselaraskan ke kanan agar rapi ala buku menu */
+table td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: #059669;
+}
+
+table th:last-child {
+    text-align: right;
+}
+
+/* Efek interaktif saat kursor menyentuh baris tabel */
+table tbody tr:hover {
+    background-color: #fdf8f0;
+    transition: background-color 0.2s ease;
 }
